@@ -5,5 +5,5 @@ set -e
 # Install godep
 go get github.com/tools/godep
 
-# Restore dependencies from Godeps
-godep restore
+# Restore dependencies from Godeps if they exist
+[[ -f ./Godeps/Godeps.json ]] && godep restore
