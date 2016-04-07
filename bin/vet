@@ -4,16 +4,16 @@
 # symlink as .git/hooks/pre-commit to use as a pre-commit check.
 #
 
-gofiles=$(find . ! -path "*/_*" -name "*.go")
-[ -z "$gofiles" ] && exit 0
-
 function checkfmt() {
-  unformatted=$(gofmt -l $*)
+  gofiles=$(find . ! -path "*/_*" -name "*.go" | grep -Fv "./vendor/")
+  [ -z "$gofiles" ] && return 0
+
+  unformatted=$(gofmt -l $gofiles)
   [ -z "$unformatted" ] && return 0
 
   echo >&2 "Go files must be formatted with gofmt. Please run:"
-  for fn in $unformatted; do
-    echo >&2 "  gofmt -w $PWD/$fn"
+  for filename in $unformatted; do
+    echo >&2 "  gofmt -w $filename"
   done
 
   return 1
@@ -33,7 +33,7 @@ function checkvet() {
   return 1
 }
 
-checkfmt $gofiles || fail=yes
-checkvet $gofiles || fail=yes
+checkfmt || fail=yes
+checkvet || fail=yes
 
 [ -z "$fail" ] || exit 1
