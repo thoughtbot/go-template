@@ -1,5 +1,5 @@
-laces
-=====
+Go template
+===========
 
 This is a starting point for a new Go project.
 
@@ -31,7 +31,7 @@ issue trackers, chatrooms, and mailing lists.
 License
 -------
 
-laces is Copyright (c) 2015 thoughtbot, inc. It is free software,
+Go template is Copyright (c) 2015-2017 thoughtbot, inc. It is free software,
 and may be redistributed under the terms specified in the [LICENSE] file.
 
 [LICENSE]: /LICENSE
@@ -39,18 +39,17 @@ and may be redistributed under the terms specified in the [LICENSE] file.
 About
 -----
 
-laces is maintained by Bernerd Schaefer and [thoughtbot's Go development team].
-
-[thoughtbot's Go development team]: <https://thoughtbot.com/services/go> "Go development team | Hire thoughtbot Gophers"
+Go template is maintained by [thoughtbot's Go development team].
 
 ![thoughtbot](http://presskit.thoughtbot.com/images/thoughtbot-logo-for-readmes.svg)
 
-laces is maintained and funded by thoughtbot, inc.
+Go template is maintained and funded by thoughtbot, inc.
 The names and logos for thoughtbot are trademarks of thoughtbot, inc.
 
 We love open source software!
 See [our other projects][community]
 or [hire us][hire] to help build your product.
 
+[thoughtbot's Go development team]: <https://thoughtbot.com/services/go>
 [community]: https://thoughtbot.com/community?utm_source=github
 [hire]: https://thoughtbot.com/hire-us?utm_source=github
